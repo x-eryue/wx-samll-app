@@ -1,0 +1,6 @@
+/* components/swiper/swiper.wxss */
+
+
+.swiperItem {
+  text-align: center;
+}

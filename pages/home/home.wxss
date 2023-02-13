@@ -1,0 +1,5 @@
+/* pages/home/home.wxss */
+ .van-grid-item image {
+  height: 170rpx;
+  width: 170rpx;
+}

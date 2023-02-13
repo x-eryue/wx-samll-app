@@ -1,0 +1,16 @@
+<!--pages/gird/pics-list/pics-list.wxml-->
+<view class="pics-list">
+  <!-- scroll -->
+  <scroll-view class="scrollView" scroll-x>
+    <view wx:for="{{category}}" wx:key="index" class="{{active == item.cateId ? 'active':'' }}" bindtap="clickCate" data-cateId="{{item.cateId}}">
+      <text>{{item.title}}</text>
+    </view>
+  </scroll-view>
+  <!-- list -->
+  <view class="list">
+    <view class="list-card" wx:for="{{list}}" wx:key="index" bindtap="goToPicsInfo" data-id="{{item.id}}">
+      <image src="{{item.img_url}}" />
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+</view>

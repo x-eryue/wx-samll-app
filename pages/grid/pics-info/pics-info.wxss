@@ -1,0 +1,53 @@
+/* pages/gird/pics-info/pics-info.wxss */
+.pics-info {
+  padding: 10rpx 20rpx;
+}
+
+.header {
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-bottom: 4rpx solid #ededed;
+  margin-bottom: 40rpx;
+}
+
+.title {
+  color: #00b0ff;
+}
+
+.info {
+  font-size: 26rpx;
+  color: #666666;
+  display: flex;
+  justify-content: space-between;
+}
+
+.thum {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20rpx;
+}
+
+.thum .thum-card:last-child {
+  margin-right: 0;
+}
+
+.thum-card {
+  height: 220rpx;
+  width: 210rpx;
+  border-radius: 6rpx;
+  margin-right: 26rpx;
+}
+
+.thum-card image {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  font-size: 30rpx;
+  line-height: 1.8;
+
+}

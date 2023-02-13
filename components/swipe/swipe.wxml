@@ -1,0 +1,6 @@
+<!--components/swiper/swiper.wxml-->
+<swiper circular indicator-dots indicator-color="#b0bec5" indicator-active-color="#ff1744" autoplay="{{autoplay}}" interval="{{interval}}" style="height: {{frameHeight}};">
+  <swiper-item wx:for="{{lbtArr}}" wx:key="index" class="swiperItem">
+    <image src="{{item.src}}" style="width: {{width}};height: {{height}};" />
+  </swiper-item>
+</swiper>

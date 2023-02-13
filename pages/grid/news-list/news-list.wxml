@@ -1,0 +1,17 @@
+<!--pages/gird/news-list/news-list.wxml-->
+<view class="news-list">
+  <view class="list" wx:for="{{list}}" wx:key="index" bindtap="goToNewsInfo" data-id="{{item.news_id}}">
+    <view class="left">
+      <image src="{{item.img_url}}" />
+    </view>
+    <view class="right">
+      <view class="title one-elli">
+        {{item.title}}
+      </view>
+      <view class="time">
+        <view>发表时间:{{item.add_time}}</view>
+        <view>点击:{{item.click}}</view>
+      </view>
+    </view>
+  </view>
+</view>

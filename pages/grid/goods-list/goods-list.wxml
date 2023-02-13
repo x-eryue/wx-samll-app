@@ -1,0 +1,21 @@
+<!--pages/grid/goods-list/goods-list.wxml-->
+<view class="goods-list">
+  <view class="card" wx:for="{{list}}" wx:key="index" bindtap="goToGoodsInfo" data-id="{{item.id}}">
+    <view class="top">
+      <image src="{{item.img_url}}" />
+    </view>
+    <view class="center two-elli">
+      {{item.title}}
+    </view>
+    <view class="bottom">
+      <view>
+        <text>￥{{item.sell_price}}</text>
+        <text>￥{{item.market_price}}</text>
+      </view>
+      <view>
+        <text>热卖</text>
+        <text>剩{{item.stock_quantity}}</text>
+      </view>
+    </view>
+  </view>
+</view>

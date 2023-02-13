@@ -1,0 +1,28 @@
+/* pages/grid/news-info/news-info.wxss */
+/* .news-info {} */
+.news-info {
+  padding: 20rpx;
+}
+
+.top {
+  height: 140rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.news-info .top {
+  border-bottom: 4rpx solid #cccccc;
+}
+
+.top .other-info {
+  font-size: 28rpx;
+  color: #149afe;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  font-size: 34rpx;
+  color: green;
+}

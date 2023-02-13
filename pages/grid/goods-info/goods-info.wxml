@@ -1,0 +1,44 @@
+<!--pages/gird/goods-info/goods-info.wxml-->
+<view class="goods-info">
+  <!-- 轮播图 -->
+  <view class="card">
+    <view class="card-content">
+      <swipe lbtArr="{{lbt}}" frameHeight="450rpx" width="50%"></swipe>
+    </view>
+  </view>
+  <!-- 商品信息 、 功能 -->
+  <view class="card">
+    <view class="card-header title">
+      {{gInfo.title}}
+    </view>
+    <view class="card-content info">
+      <view class="price">
+        <text>市场价:<text>￥{{gInfo.market_price}}</text></text>
+        <text>销售价:<text>￥{{gInfo.sell_price}}</text></text>
+      </view>
+      <view class="num-box">
+        <text>购买数量 : </text>
+        <van-stepper value="{{ 1 }}" integer bind:change="onChange" />
+      </view>
+      <view class="btn">
+        <van-button type="primary">立即购买</van-button>
+        <van-button type="danger">加入购物车</van-button>
+      </view>
+    </view>
+  </view>
+  <!-- 参数 -->
+  <view class="card">
+    <view class="card-header">
+      商品参数
+    </view>
+    <view class="card-content params">
+      <text>商品货号:{{gInfo.goods_no}}</text>
+      <text>库存情况:{{gInfo.stock_quantity}}</text>
+      <text>上架时间:{{gInfo.add_time}}</text>
+    </view>
+    <view class="card-footer fbtn">
+      <van-button type="info" size="large" plain>图文介绍</van-button>
+      <van-button type="danger" size="large" plain>商品评论</van-button>
+    </view>
+  </view>
+</view>

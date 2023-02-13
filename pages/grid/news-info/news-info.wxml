@@ -1,0 +1,20 @@
+<!--pages/grid/news-info/news-info.wxml-->
+<view class="news-info">
+  <view class="top">
+    <view class="title one-elli">
+      {{newsInfo.title}}
+    </view>
+    <view class="other-info">
+      <view class="time">
+        发表时间:{{newsInfo.add_time}}
+      </view>
+      <view class="click">
+        点击{{newsInfo.click}}
+      </view>
+    </view>
+  </view>
+  <!-- v-html  -->
+  <view class="content">
+    <rich-text nodes="{{newsInfo.content}}" />
+  </view>
+</view>

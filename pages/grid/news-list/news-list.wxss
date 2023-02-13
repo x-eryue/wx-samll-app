@@ -1,0 +1,40 @@
+/* pages/grid/news-list/news-list.wxss */
+/* .news-list{
+  
+} */
+.list {
+  height: 170rpx;
+  width: 100%;
+  border-bottom: 2rpx solid #cccccc;
+  display: flex;
+  padding: 20rpx;
+}
+
+.left {
+  flex: 1;
+}
+
+.left image {
+  height: 130rpx;
+  width: 130rpx;
+}
+
+.right {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+.title {
+  width: 550rpx;
+}
+
+.time {
+  font-size: 30rpx;
+  color: rgb(62, 187, 236);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

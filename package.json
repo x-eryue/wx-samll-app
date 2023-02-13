@@ -1,0 +1,25 @@
+{
+  "name": "wx-samll-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x-eryue/wx-samll-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/x-eryue/wx-samll-app/issues"
+  },
+  "homepage": "https://github.com/x-eryue/wx-samll-app#readme",
+  "dependencies": {
+    "@vant/weapp": "^1.10.13",
+    "mobx-miniprogram": "^4.13.2",
+    "mobx-miniprogram-bindings": "^2.1.5"
+  }
+}

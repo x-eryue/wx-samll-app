@@ -1,0 +1,42 @@
+/* pages/gird/pics-list/pics-list.wxss */
+.scrollView {
+  height: 80rpx;
+  white-space: nowrap;
+  margin-bottom: 20rpx;
+}
+
+.scrollView view {
+  display: inline-block;
+  padding: 16rpx 38rpx;
+}
+
+.scrollView .active {
+  color: #00b0ff;
+}
+
+.list {
+  padding: 0 20rpx;
+}
+
+.list-card {
+  position: relative;
+  height: 700rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+  margin-bottom: 16rpx;
+}
+
+.list-card image {
+  height: 100%;
+  width: 100%;
+}
+
+.list-card text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 30rpx;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,22 @@
+<!--pages/gird/pics-info/pics-info.wxml-->
+<view class="pics-info">
+  <view class="header">
+    <view class="title one-elli">
+      {{picInfo.title}}
+    </view>
+    <view class="info">
+      <text>发表时间 : {{picInfo.add_time}}</text>
+      <text>点击 : {{picInfo.click}}</text>
+    </view>
+  </view>
+  <!-- thum -->
+  <view class="thum">
+    <view class="thum-card" wx:for="{{thum}}" wx:key="index" bindtap="preview" data-src="{{item.src}}">
+      <image src="{{item.src}}" />
+    </view>
+  </view>
+  <!-- v-html -->
+  <view class="content">
+    <rich-text nodes="{{picInfo.content}}" />
+  </view>
+</view>
