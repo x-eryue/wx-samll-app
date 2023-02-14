@@ -30,3 +30,7 @@ view {
   line-clamp: 2;
   box-orient: vertical;
 }
+
+.red {
+  color: red;
+}

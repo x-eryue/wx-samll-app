@@ -1,2 +1,34 @@
 <!--pages/car/car.wxml-->
-<text>pages/car/car.wxml</text>
+<view class="car">
+  <!-- 列表 -->
+  <view class="list ">
+    <view class="car-card" wx:for="{{carData}}" wx:key="index">
+      <view class="l">
+        <van-switch checked="{{ item.select }}" bind:change="onChangeSwitch" data-id="{{item.id}}" />
+      </view>
+      <view class="c">
+        <image src="{{item.img_url}}" />
+      </view>
+      <view class="r">
+        <view class="top one-elli">
+          {{item.title}}
+        </view>
+        <view class="bottom">
+          <text class="price red">￥{{item.sell_price}}</text>
+          <van-stepper value="{{ item.cou }}" bind:change="onChangeNum" data-id="{{item.id}}" />
+          <text style="color: blue;" bindtap="removeGoods" data-id="{{item.id}}">删除</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 结算  -->
+  <view class="jie-suan car-card">
+    <view class="left">
+      <text>总计(不含运费)</text>
+      <text>已勾选商品<text class="red">0</text>件,总价:<text class="red">￥100</text></text>
+    </view>
+    <view class="right">
+      <van-button type="danger">去结算</van-button>
+    </view>
+  </view>
+</view>

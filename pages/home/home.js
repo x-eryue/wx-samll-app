@@ -1,4 +1,7 @@
 // pages/home/home.js
+import {
+  createStoreBindings
+} from 'mobx-miniprogram-bindings'
 Page({
 
   // 页面的初始数据
@@ -21,7 +24,10 @@ Page({
 
   // 生命周期函数--监听页面加载
   onLoad(options) {
-
+    wx.setTabBarBadge({
+      index: 2,
+      text: '1'
+    })
   },
 
   // 生命周期函数--监听页面初次渲染完成

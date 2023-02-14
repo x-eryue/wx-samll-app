@@ -18,11 +18,11 @@
       </view>
       <view class="num-box">
         <text>购买数量 : </text>
-        <van-stepper value="{{ 1 }}" integer bind:change="onChange" />
+        <van-stepper value="{{ 1 }}" integer bind:change="onChangeNum" />
       </view>
       <view class="btn">
         <van-button type="primary">立即购买</van-button>
-        <van-button type="danger">加入购物车</van-button>
+        <van-button type="danger" bindtap="addToCar">加入购物车</van-button>
       </view>
     </view>
   </view>
