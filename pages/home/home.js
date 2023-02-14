@@ -2,13 +2,15 @@
 import {
   createStoreBindings
 } from 'mobx-miniprogram-bindings'
+import {
+  store
+} from '../../store/store.js'
 Page({
-
   // 页面的初始数据
   data: {
     lbt: []
   },
-
+  // oberserv
   // 获取轮播图
   getLbt() {
     wx.request({
@@ -21,13 +23,13 @@ Page({
       }
     })
   },
-
   // 生命周期函数--监听页面加载
   onLoad(options) {
-    wx.setTabBarBadge({
-      index: 2,
-      text: '1'
+    this.storeBindings = createStoreBindings(this, {
+      store,
+      fields: ['count', 'carData']
     })
+    this.storeBindings.updateStoreBindings()
   },
 
   // 生命周期函数--监听页面初次渲染完成
@@ -37,16 +39,17 @@ Page({
 
   // 生命周期函数--监听页面显示
   onShow() {
-
+    wx.setTabBarBadge({
+      index: 2,
+      text: this.data.count + "",
+    })
   },
   // 生命周期函数--监听页面隐藏
-  onHide() {
-
-  },
+  onHide() {},
 
   // 生命周期函数--监听页面卸载
   onUnload() {
-
+    this.storeBindings.destroyStoreBindings()
   },
 
   // 页面相关事件处理函数--监听用户下拉动作

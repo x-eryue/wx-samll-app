@@ -20,7 +20,6 @@ Page({
     const {
       id: gId
     } = e.currentTarget.dataset
-    console.log(e.detail);
     this.update_select({
       id: gId,
       select
@@ -53,6 +52,8 @@ Page({
       fields: ['carData'],
       actions: ["update_car_num", "remove_goods", "update_select"]
     })
+    this.storeBindings.updateStoreBindings()
+
   },
 
   /**
@@ -102,6 +103,5 @@ Page({
    */
   onShareAppMessage() {
     // 解绑
-    this.storeBindings.destroyStoreBindings()
   }
 })
