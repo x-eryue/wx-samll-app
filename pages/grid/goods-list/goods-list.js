@@ -10,7 +10,7 @@ Page({
   // 获取list
   getGoodsList() {
     wx.request({
-      url: 'http://127.0.0.1:3000/api/getgoods',
+      url: 'http://127.0.0.1:3000/api/goods/getlist',
       method: "GET",
       data: {
         pageindex: 1

@@ -31,7 +31,7 @@ Page({
   // 获取轮播
   getLbt() {
     wx.request({
-      url: `http://127.0.0.1:3000/api/getgoodslunbo/${this.data.id}`,
+      url: `http://127.0.0.1:3000/api/goods/getgoodslunbo/${this.data.id}`,
       method: "GET",
       success: res => {
         this.setData({

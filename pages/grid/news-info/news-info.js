@@ -26,7 +26,7 @@ Page({
    */
   onReady() {
     wx.request({
-      url: `http://127.0.0.1:3000/api/getnew/${this.data.id}`,
+      url: `http://127.0.0.1:3000/api/news/getnew/${this.data.id}`,
       method: "GET",
       success: res => {
         this.setData({
@@ -36,9 +36,7 @@ Page({
     })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
+  // 生命周期函数--监听页面显示
   onShow() {
 
   },

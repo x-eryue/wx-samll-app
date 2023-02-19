@@ -5,9 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userInfo: {}
   },
-
+  login() {
+    wx.getUserProfile({
+      desc: '用于测试',
+      success: res => {
+        let user_name = Math.round(Math.random() * (9999 - 1000) + 1000)
+        const {
+          avatarUrl: avatar,
+          nickName: nick_name,
+        } = res.userInfo
+        this.setData({
+          userInfo: {
+            avatar,
+            nick_name,
+            user_name
+          }
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

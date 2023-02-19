@@ -8,7 +8,7 @@ Page({
   },
   getCate() {
     wx.request({
-      url: 'http://127.0.0.1:3000/api/getimgcategory',
+      url: 'http://127.0.0.1:3000/api/pics/getimgcategory',
       method: "GET",
       success: res => {
         res.data.message.unshift({
@@ -23,7 +23,7 @@ Page({
   },
   getList(id) {
     wx.request({
-      url: `http://127.0.0.1:3000/api/getimages/${id}`,
+      url: `http://127.0.0.1:3000/api/pics/getimages/${id}`,
       method: "GET",
       success: res => {
         this.setData({
@@ -41,7 +41,7 @@ Page({
       active: cateid
     })
     // 获取列表
-    this.getList(id)
+    this.getList(cateid)
   },
   // 跳转图片详情页
   goToPicsInfo(e) {

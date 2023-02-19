@@ -7,7 +7,6 @@ Page({
   // 跳转到详情页
   goToNewsInfo(e) {
     const id = e.currentTarget.dataset.id
-    console.log(id);
     wx.navigateTo({
       url: `/pages/grid/news-info/news-info?news_id=${id}`,
     })
@@ -21,7 +20,7 @@ Page({
   // 生命周期函数--监听页面初次渲染完成
   onReady() {
     wx.request({
-      url: 'http://127.0.0.1:3000/api/getnewslist',
+      url: 'http://127.0.0.1:3000/api/news/getnewslist',
       method: "GET",
       success: res => {
         this.setData({

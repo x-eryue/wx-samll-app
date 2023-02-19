@@ -1,4 +1,15 @@
 <!--pages/users/users.wxml-->
 <view class="user">
-
+  <view class="place" wx:if="{{!userInfo.avatar}}">
+    <van-button type="primary" bindtap="login">请登录</van-button>
+  </view>
+  <view class="user-info" wx:if="{{userInfo.avatar}}">
+    <view class="avatar">
+      <image src="{{userInfo.avatar}}" />
+    </view>
+    <view class="info">
+      <view class="nick">{{ userInfo.nick_name }}</view>
+      <view class="uname">用户名：{{ userInfo.user_name }}</view>
+    </view>
+  </view>
 </view>

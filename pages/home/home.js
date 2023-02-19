@@ -14,7 +14,7 @@ Page({
   // 获取轮播图
   getLbt() {
     wx.request({
-      url: 'http://127.0.0.1:3000/api/getlunbo',
+      url: 'http://127.0.0.1:3000/api/pics/getlunbo',
       method: "GET",
       success: res => {
         this.setData({

@@ -24,7 +24,7 @@ Page({
   },
   getPicInfo() {
     wx.request({
-      url: `http://127.0.0.1:3000/api/getimageInfo/${this.data.picId}`,
+      url: `http://127.0.0.1:3000/api/pics/getimageInfo/${this.data.picId}`,
       method: "GET",
       success: res => {
         this.setData({
@@ -35,7 +35,7 @@ Page({
   },
   getThum() {
     wx.request({
-      url: `http://127.0.0.1:3000/api/getgoodsthum/${this.data.picId}`,
+      url: `http://127.0.0.1:3000/api/pics/getgoodsthum/${this.data.picId}`,
       method: "GET",
       success: res => {
         this.setData({
