@@ -1,0 +1,24 @@
+<!--components/comment/comment.wxml-->
+<view class="comment">
+  <view class="cmt-area">
+    <view class="title">发表评论</view>
+    <textarea value="{{val}}" placeholder="请文明用语" class="area" bindinput="textInput" />
+    <van-button type="info" size="large" bindtap="clickBtn">提交评论</van-button>
+  </view>
+  <view class="cmt-list">
+    <view class="box" wx:for="{{list}}" wx:key="index">
+      <view class="user-info">
+        <image src="{{item.user_avatar}}" />
+        <text class="name">{{item.nick_name}}</text>
+      </view>
+      <view class="content">
+        {{ item.contents }}
+      </view>
+      <view class="add_time">
+        {{d.formDate(item.add_time)}}
+      </view>
+    </view>
+  </view>
+</view>
+<van-toast id="van-toast" />
+<wxs src="../../utils/formdate.wxs" module="d" />

@@ -1,0 +1,22 @@
+function formDate(val) {
+  var date = getDate(val)
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var d = date.getDate()
+  var h = date.getHours()
+  if (h < 10) {
+    h = "0" + h;
+  }
+  var m = date.getMinutes()
+  if (m < 10) {
+    m = "0" + m;
+  }
+  var s = date.getSeconds();
+  if (s < 10) {
+    s = "0" + s;
+  }
+  return year + "/" + month + "/" + d + "/" + h + ":" + m + ":" + s;
+}
+module.exports = {
+  formDate: formDate
+}

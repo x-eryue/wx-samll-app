@@ -9,9 +9,10 @@
         {{item.title}}
       </view>
       <view class="time">
-        <view>发表时间:{{item.add_time}}</view>
+        <view>发表时间:{{d.formDate(item.add_time)}}</view>
         <view>点击:{{item.click}}</view>
       </view>
     </view>
   </view>
 </view>
+<wxs src="../../../utils/formdate.wxs" module="d" />

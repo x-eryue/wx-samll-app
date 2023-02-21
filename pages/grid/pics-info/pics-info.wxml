@@ -5,7 +5,7 @@
       {{picInfo.title}}
     </view>
     <view class="info">
-      <text>发表时间 : {{picInfo.add_time}}</text>
+      <text>发表时间 : {{d.formDate(picInfo.add_time)}}</text>
       <text>点击 : {{picInfo.click}}</text>
     </view>
   </view>
@@ -20,3 +20,5 @@
     <rich-text nodes="{{picInfo.content}}" />
   </view>
 </view>
+
+<wxs src="../../../utils/formdate.wxs" module="d" />

@@ -8,6 +8,7 @@ let carData = JSON.parse(wx.getStorageSync('carData') || '[]')
 export const store = observable({
   // 数据
   carData,
+  user: {},
   numA: 1,
   // getters
   get count() {
@@ -68,5 +69,9 @@ export const store = observable({
     this.carData = Object.assign([], this.carData, carArr)
 
     wx.setStorageSync('carData', JSON.stringify(this.carData))
+  }),
+  // 加入user
+  add_user: action(function (data) {
+    this.user = data
   })
 })

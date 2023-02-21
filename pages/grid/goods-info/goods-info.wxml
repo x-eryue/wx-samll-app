@@ -34,7 +34,7 @@
     <view class="card-content params">
       <text>商品货号:{{gInfo.goods_no}}</text>
       <text>库存情况:{{gInfo.stock_quantity}}</text>
-      <text>上架时间:{{gInfo.add_time}}</text>
+      <text>上架时间:{{d.formDate(gInfo.add_time)}}</text>
     </view>
     <view class="card-footer fbtn">
       <van-button type="info" size="large" plain>图文介绍</van-button>
@@ -42,3 +42,4 @@
     </view>
   </view>
 </view>
+<wxs src="../../../utils/formdate.wxs" module="d" />

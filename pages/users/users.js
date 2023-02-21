@@ -1,4 +1,10 @@
 // pages/users/users.js
+import {
+  createStoreBindings
+} from 'mobx-miniprogram-bindings'
+import {
+  store
+} from '../../store/store.js'
 Page({
 
   /**
@@ -23,6 +29,8 @@ Page({
             user_name
           }
         })
+        this.add_user(this.data.userInfo)
+        console.log(this.data.user);
       }
     })
   },
@@ -30,7 +38,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.storeBindings = createStoreBindings(this, {
+      store,
+      actions: ["add_user"]
+    })
   },
 
   /**

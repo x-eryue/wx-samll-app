@@ -17,4 +17,6 @@
   <view class="content">
     <rich-text nodes="{{newsInfo.content}}" />
   </view>
+  <!-- 评论 -->
+  <cmt news_id="{{id}}"></cmt>
 </view>

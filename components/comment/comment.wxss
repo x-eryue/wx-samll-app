@@ -1,0 +1,49 @@
+/* components/comment/comment.wxss */
+.comment {
+  margin-top: 20rpx;
+}
+
+.comment .title {
+  font-size: 40rpx;
+}
+
+.area {
+  border: 2rpx solid #cccccc;
+  width: 100%;
+  margin: 20rpx 0;
+  font-size: 30rpx;
+}
+
+.box {
+  height: auto;
+  min-height: 100rpx;
+  max-height: 300rpx;
+  padding-top: 20rpx;
+  border-bottom: 1px solid salmon;
+  font-size: 30rpx;
+  line-height: 1.5;
+
+
+}
+
+.user-info {
+  display: flex;
+  display: -webkit-flex;
+
+
+}
+
+.name {
+  padding-left: 10rpx;
+}
+
+.user-info image {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+}
+
+.content {
+  padding-left: 2.1rem;
+  height: auto;
+}
